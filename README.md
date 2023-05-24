@@ -1,14 +1,19 @@
 # shopping-cart
 ess un carrito de compras
 
+
 PETICIONES DESDE POSTMAN
 Header: Authorization Basic U2hvcHBpbmdVc2VyOlRpNEVFalRiVDQzcDJua3Z3NzBHJCQzYWJYVT0=
+
 
 Peticiones desde postman:
 name: ShoppingUser
 password: Ti4EEjTbT43p2nkvw70G$$3abXU=
 
+
 Url swaguer: http://localhost:8082/shopping-cart/swagger/swagger-ui/index.html#/
+
+
 
 CREACION DE LA BASE DE DATOS EN POSTGRESQL
 
