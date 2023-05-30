@@ -6,7 +6,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import backend.shoppingcart.constants.ConstantesOtpLogin;
+import backend.shoppingcart.component.util.constant.ConstantesGeneral;
 import backend.shoppingcart.dto.base.GenericResponseServiceDto;
 import backend.shoppingcart.dto.fakes.RequestGetOneDto;
 import backend.shoppingcart.dto.fakes.ResponseGetKafestoreapiDto;
@@ -26,24 +26,24 @@ public class FakesServiceImpl implements IFakesService{
 	private List<ResponseGetKafestoreapiDto> servicioGetKafestoreapi() {
 
 		Map<String, String> headers = new HashMap<>();
-		headers.put(ConstantesOtpLogin.NCONTENTTYPE, ConstantesOtpLogin.APPLICATIONJSON);
-		headers.put(ConstantesOtpLogin.ACCEPTLANGUAGE, ConstantesOtpLogin.LANGUAGE);
+		headers.put(ConstantesGeneral.NCONTENTTYPE, ConstantesGeneral.APPLICATIONJSON);
+		headers.put(ConstantesGeneral.ACCEPTLANGUAGE, ConstantesGeneral.LANGUAGE);
 
 		consumer.setDefaultHeaders(headers);
 
-		return consumer.getOneByQueryStringList(ConstantesOtpLogin.URL_BASE_FAKESTOREAPI, "/products")
+		return consumer.getOneByQueryStringList(ConstantesGeneral.URL_BASE_FAKESTOREAPI, "/products")
 				.block();
 	}
 	
 	private ResponseGetKafestoreapiDto servicioGetKafestoreapiOne(RequestGetOneDto request) {
 
 		Map<String, String> headers = new HashMap<>();
-		headers.put(ConstantesOtpLogin.NCONTENTTYPE, ConstantesOtpLogin.APPLICATIONJSON);
-		headers.put(ConstantesOtpLogin.ACCEPTLANGUAGE, ConstantesOtpLogin.LANGUAGE);
+		headers.put(ConstantesGeneral.NCONTENTTYPE, ConstantesGeneral.APPLICATIONJSON);
+		headers.put(ConstantesGeneral.ACCEPTLANGUAGE, ConstantesGeneral.LANGUAGE);
 
 		consumer.setDefaultHeaders(headers);
 
-		return consumer.getOneByQueryStringOne(ConstantesOtpLogin.URL_BASE_FAKESTOREAPI, "/products/"+request.getIdProducto(), ResponseGetKafestoreapiDto.class)
+		return consumer.getOneByQueryStringOne(ConstantesGeneral.URL_BASE_FAKESTOREAPI, "/products/"+request.getIdProducto(), ResponseGetKafestoreapiDto.class)
 				.block();
 	}
 

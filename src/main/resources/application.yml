@@ -21,8 +21,8 @@ spring:
   shopping-cart:
     datasource:
       url: jdbc:postgresql://localhost:5432/shoppingcart
-      username: user
-      password: pass
+      username: 
+      password: 
       driverClassName: org.postgresql.Driver
       dialect:  org.hibernate.dialect.PostgreSQLDialect
       ddl: none
@@ -47,12 +47,6 @@ spring:
       hibernate:
 ##        default_schema: SCHEMA
        dialect: org.hibernate.dialect.PostgreSQLDialect
-
-api-otp-verification:
-  canal: "TVR"
-
-sp-info-iccm:
-  canal: 19
 
 app:
   name: ${APP_NAME:otp-app}
