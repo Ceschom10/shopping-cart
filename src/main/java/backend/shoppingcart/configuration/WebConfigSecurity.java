@@ -1,5 +1,11 @@
 package backend.shoppingcart.configuration;
 
+/** Security
+ * @author Cesar Amaya
+ * @version 1.0
+ * @since 23/05/2023
+*/
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

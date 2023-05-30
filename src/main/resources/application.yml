@@ -48,7 +48,7 @@ spring:
        dialect: org.hibernate.dialect.PostgreSQLDialect
 
 app:
-  name: ${APP_NAME:otp-app}
+  name: ${APP_NAME:catalogos}
   conf:
     date:
       format: ${APP_DATE_FORMAT:dd/MM/yyyy HH:mm:ss Z}
